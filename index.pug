@@ -1,0 +1,14 @@
+extends base
+
+block content
+   header.header 
+      h1.header__container Find Your Course
+         .header__nav_mobil Choose YOUR Career
+   main.main 
+      .main__container 
+         include nav
+         section.cardsList 
+            include listCards
+            p.cardList__more More programmes
+   script
+      include main.js

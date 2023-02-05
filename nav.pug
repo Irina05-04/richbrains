@@ -1,0 +1,24 @@
+- var navList = ['Business & Management','Computing & IT','Fashion & Media','Finance & Accounting','Law & Criminology','Marketing & Communications','Psychology & Social Sciences'];
+- var subList = ['Market Research Executive','Child Psychologist','Guidance Counsellor','Behaviour Analyst','Recreational Therapist'];
+
+nav.nav
+   h2.nav__title Careers
+   .nav__line
+   ul.nav__list
+      each item in navList
+         if(item === 'Psychology & Social Sciences')
+            li.nav__item.nav__item_active 
+               a.nav__link #{item}
+            ul.submenu
+               each value in subList 
+                  if(value === 'Behaviour Analyst')
+                     li.submenu__item.submenu__item_active
+                        a #{value}
+                  else 
+                     li.submenu__item
+                        a #{value}
+         else 
+            li.nav__item 
+               a.nav__link #{item}
+   .nav__line
+   div.nav__button Show all programmes

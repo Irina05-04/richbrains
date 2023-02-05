@@ -1,0 +1,36 @@
+- 
+   var cardsList = [
+      {id: 1,image: './img/firstcard.png',calendar: 'Every 12 weeks'},
+      {id: 2,image: './img/secondcard.png',calendar: 'Every 12 weeks'},
+      {id: 3,image: './img/secondcard.png',calendar: 'Every 12 weeks'},
+      {id: 4,image: './img/thirdcard.png',calendar: 'Every 12 weeks'},
+      {id: 5,image: './img/thirdcard.png',calendar: 'Every 12 weeks'},
+      {id: 6,image: './img/fourcard.png',calendar: 'Every 12 weeks'}
+   ];
+
+.cards
+   each item in cardsList 
+      .screne
+         .card
+            .card_front
+               .card__line
+               .card__image 
+                  img(src=item.image, alt="")
+               p.card__section Business Management
+               p.card__name Master of Business Administration CMI
+               .card__description 
+                  p.card__education Postgraduate
+                  p.card__calendar #{item.calendar}
+               button.card__button_front More Info
+            .card_back
+               p.card__title MSc Data Analytics and Information Systems Management
+               .card__duration.duration
+                  p.duration__title Duration
+                  p.duration__min Minimum: 18 months
+                  p.duration__max Maximum: 36 months
+               p.card__start Start Dates:
+                  span.card__start_text <br>January, April, July, October
+               p.card__price £8,500
+               button.card__button_back More Info
+               .card__button_round.round
+                  img.round__img(src="./img/icon_plus.svg", alt="")

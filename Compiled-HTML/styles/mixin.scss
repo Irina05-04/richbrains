@@ -1,0 +1,15 @@
+@use './variants.scss';
+
+@mixin btn($border: 'true', $color, $background, $padding ){
+   background-color: $background;
+   color: $color;
+   padding: $padding;
+   border-radius: 3px;
+   font-size: 14px;
+   line-height: 16px;
+   text-transform: uppercase;
+   cursor: pointer;
+   @if($border == 'true'){
+      border: 1px solid variants.$color_hover;
+   } @else {border: none;}
+}

@@ -1,0 +1,17 @@
+@use './variants.scss';
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Helvetica';
+   color: variants.$color_text;
+   background-color: variants.$color_background;
+}
+
+li{
+   list-style: none;
+}
